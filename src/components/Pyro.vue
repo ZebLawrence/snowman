@@ -29,9 +29,9 @@ export default {
             sound: {
                 enable: this.sound,
                 list: [
-                    'assets/explosion0.mp3',
-                    'assets/explosion1.mp3',
-                    'assets/explosion2.mp3'
+                    'explosion0.mp3',
+                    'explosion1.mp3',
+                    'explosion2.mp3'
                 ],
                 min: 4,
                 max: 8
