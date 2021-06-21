@@ -71,8 +71,6 @@ export default {
     position: fixed;
     height: 100%;
     width: 100%;
-    background: rgb(0,0,0);
-    background: linear-gradient(176deg, rgba(0,0,0,0.38) 2%, rgb(0 0 0) 19%, rgb(14 0 70) 47%, rgba(0,1,255,1) 67%, rgba(255,141,0,1) 95%, rgba(236,255,0,1) 100%);
     top: 0px;
     left: 0px;
     pointer-events: none;
