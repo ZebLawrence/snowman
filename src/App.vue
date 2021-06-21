@@ -2,6 +2,8 @@
   <div id="app">
     <Navbar
       :sound="sound"
+      :color="color"
+      :difficulty="difficulty"
       @reset="handleGameReset"
       @colorUpdate="handleColorUpdate"
       @difficultyUpdate="handleDifficultyUpdate"
@@ -32,17 +34,19 @@ export default {
   data () {
     return {
       activePhrase: 'Snowman',
-      color: '#000',
-      difficulty: 'easy',
+      color: localStorage.getItem('selectedColor') || '#000',
+      difficulty: localStorage.getItem('selectedDifficulty') || 'easy',
       guesses: [],
       sound: false
     }
   },
   methods: {
     handleColorUpdate (color) {
+      localStorage.setItem('selectedColor', color)
       this.color = color
     },
     handleDifficultyUpdate (difficulty) {
+      localStorage.setItem('selectedDifficulty', difficulty)
       this.difficulty = difficulty
       this.handleGameReset()
     },

@@ -46,6 +46,7 @@
                 type="checkbox" />
             <select
                 class="custom-select custom-select-sm mr-sm-2"
+                v-model="difficulty"
                 @change="selectDifficulty"
             >
                 <option value="easy">Easy</option>
@@ -56,6 +57,7 @@
                 <input 
                     type="color"
                     class="mr-sm-2"
+                    v-model="color"
                     @input="selectColor"
                     @change="changeColor"
                     aria-label="Color"
@@ -113,7 +115,20 @@ export default {
         sound: {
             type: Boolean,
             required: true
+        },
+        color: {
+            type: String,
+            required: true
+        },
+        difficulty: {
+            type: String,
+            required: true
         }
     }
 }
 </script>
+<style>
+#app .navbar {
+    z-index: 1;
+}
+</style>

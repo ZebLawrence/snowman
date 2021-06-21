@@ -40,20 +40,35 @@ export default {
 <style lang="scss">
 .btn-selection{
     font-size: 3rem !important;
+    transition-property: top;
+    transition-duration: 1s;
+    transition-timing-function: ease-in-out;
+    top: 0px;
 
-    &.bad{
+    &:disabled{
         position: relative;
-        &:before{
-            top: 50%;
-            left: 0;
-            content:  '';
-            height: 4px;
-            width: 100%;
-            background: red;
-            position: absolute;
-            transform: rotate(45deg) translateY(-50%);
+        top: -50px;
+        transition-property: top;
+        transition-duration: 1s;
+        transition-timing-function: ease-in-out;
 
+        &.bad{
+            position: relative;
+            top: 50px;
+
+            &:before{
+                top: 50%;
+                left: 0;
+                content:  '';
+                height: 4px;
+                width: 100%;
+                background: red;
+                position: absolute;
+                transform: rotate(45deg) translateY(-50%);
+
+            }
         }
     }
+
 }
 </style>
