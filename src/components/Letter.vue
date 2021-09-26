@@ -12,6 +12,7 @@ export default {
             type: String,
             required: true
         },
+        
         isRevealed: {
             type: Boolean,
             default: false
